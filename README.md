@@ -1,2 +1,2 @@
 # AlteniaVenta
-This is Point of Sale system for tortillerias.
+This is a Point of Sale system for tortillerias.
