@@ -1,3 +1,7 @@
+import TextField from "@mui/material/TextField";
+import InputAdornment from "@mui/material/InputAdornment";
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import KeyIcon from "@mui/icons-material/Key";
 
 import { Btn1 } from "components";
 import { useState, useEffect } from "react";
@@ -24,21 +28,36 @@ export const Home = () => {
         </div>
         <div className="d-block justify-content-center mt-5">
           <h2 className="subtitle">Ingresa con tu usuario y contraseña</h2>
-          <form action="">
-            <div className="d-flex justify-content-center mt-2">
-              <input className="input-text" type="text" placeholder="Usuario" />
-            </div>
-            <div className="d-flex justify-content-center mt-2">
-              <input
-                className="input-text"
-                type="text"
-                placeholder="Contraseña"
-              />
-            </div>
-            <div className="d-flex justify-content-center mt-2">
-              <Btn1 title="Ingresar" variant="outlined" onClick={handleSubmit}/>
-            </div>
-          </form>
+
+        <div className="d-flex justify-content-center mt-3">
+            <TextField
+              label="Usuario"
+              variant="filled"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <AccountCircle />
+                  </InputAdornment>
+                ),
+              }}
+            />
+          </div>
+          <div className="d-flex justify-content-center mt-3">
+            <TextField
+              label="Contraseña"
+              variant="filled"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <KeyIcon />
+                  </InputAdornment>
+                ),
+              }}
+            />
+          </div>
+          <div className="d-flex justify-content-center mt-3">
+            <Btn1 title="Ingresar" variant="outlined" onClick={handleSubmit} />
+          </div>
         </div>
       </div>
     </div>
