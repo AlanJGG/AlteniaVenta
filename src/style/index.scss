@@ -1,7 +1,13 @@
 @import './colors.scss';
 @import './fonts.scss';
 
-//Pages
+/*Pages*/
 
-//Components
+//Home
+@import './pages/home.scss';
+//Main
+@import './pages/main.scss';
+
+
+/*Components*/
 @import './components/buttons.scss';

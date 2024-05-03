@@ -11,33 +11,12 @@ export const Main = () => {
   }, []);
 
   return (
-    <>
-      <div>
-        <h1 className="title">AlteniaVenta</h1>
+   <div className="d-flex justify-content-center">
+      <div className="btn-container">
+        <button className="btn-accion">Venta</button>
+        <button className="btn-accion">Gastos</button>
+        <button className="btn-accion">Corte</button>
       </div>
-      <div className="card">
-        <h2 className="subtitle">Ingresa con tu wow</h2>
-        <form action="">
-          <div className="input_row">
-            <input className="input-text" type="text" placeholder="Usuario" />
-          </div>
-          <div className="input_row">
-            <input
-              className="input-text"
-              type="text"
-              placeholder="Contraseña"
-            />
-          </div>
-          <div className="input_row">
-            <button
-              className="btn"
-              onClick={() => console.log("Ingresar activado")}
-            >
-              Ingresar
-            </button>
-          </div>
-        </form>
-      </div>
-    </>
+   </div>
   );
 };

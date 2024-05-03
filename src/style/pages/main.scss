@@ -1,0 +1,21 @@
+.btn-container {
+  display: flex;
+  margin-top: 200px;
+  .btn-accion {
+    font-family: $font_1;
+    padding: 25px;
+    padding-inline: 40px;
+    margin-inline: 15px;
+    border: 2px;
+    border-radius: 5px;
+    border-color: $color_4;
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  .btn-accion:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: $color_1;
+    transform: translateY(-2px);
+    background-color: $color_4;
+  }
+}
