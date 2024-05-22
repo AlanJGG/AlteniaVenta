@@ -1,6 +1,7 @@
 {
   "name": "altenia-venta",
   "version": "0.1.0",
+  "author": "AlanJGG",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -12,7 +13,6 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
     "concurrently": "^8.2.2",
-    "electron": "^28.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0",
@@ -26,6 +26,8 @@
     "start": "react-scripts start",
     "electron-react": "concurrently \"npm start\" \"wait-on http://127.0.0.1:3000 && electron .\"",
     "build": "react-scripts build",
+    "electron": "electron .",
+    "dist": "electron-builder",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -46,5 +48,34 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "electron": "^30.0.6",
+    "electron-builder": "^24.13.3",
+    "electron-is-dev": "^3.0.1"
+  },
+  "build": {
+    "extends": null,
+    "appId": "com.altenia.venta",
+    "productName": "AlteniaVenta",
+    "files": [
+      "build/**/*",
+      "main.js",
+      "preload.js"
+    ],
+    
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   }
 }

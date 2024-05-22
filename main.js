@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, Menu } = require('electron')
 const path = require('node:path')
+// const isDev = require('electron-is-dev')
 
 function createWindow () {
   // Create the browser window.
@@ -17,8 +18,25 @@ function createWindow () {
     }
   })
 
-  // and load the index.html of the app.
-  mainWindow.loadURL('http://localhost:3000')
+  // const startURL = isDev
+  //   ? 'http://localhost:3000'
+  //   : `file://${path.join(__dirname, '../build/index.html')}`;
+
+  // import('electron-is-dev').then(({ isDev }) => {
+  //   if (isDev) {
+  //     mainWindow.loadURL("http://localhost:3000")
+  //   } else {
+  //     mainWindow.loadURL(`file://${path.join(__dirname, '../build/index.html')}`)
+  //   }
+  // }).catch(error => {
+  //   console.error('Error al cargar el módulo electron-is-dev:', error);
+  // });
+
+  
+  //production
+  mainWindow.loadURL(`file://${path.join(__dirname, './index.html')}`)
+  //dev
+  // mainWindow.loadURL("http://localhost:3000")
 
   const template = [
     {
