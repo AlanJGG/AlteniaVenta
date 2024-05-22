@@ -28,7 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "electron:start": "wait-on http://127.0.0.1:3000 && electron .",
-    "electron-react": "concurrently \"cross-env BROWSER=none npm start\" \"npm run electron:start\"",
+    "dev": "concurrently \"cross-env BROWSER=none npm start\" \"npm run electron:start\"",
     "dist": "electron-builder",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -54,7 +54,7 @@
   "devDependencies": {
     "electron": "^30.0.6",
     "electron-builder": "^24.13.3",
-    "electron-is-dev": "^3.0.1"
+    "electron-is-dev": "^2.0.0"
   },
   "build": {
     "extends": null,
