@@ -13,6 +13,7 @@ function createWindow() {
     minimizable: false,
     maximizable: false,
     fullscreenable: false,
+    icon: './public/altenia-logo.png',
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(__dirname, "preload.js"),
