@@ -61,15 +61,18 @@
     "files": [
       "build/**/*",
       "main.js",
-      "preload.js"
+      "preload.js",
+      "node_modules/**/*",
+      "package.json"
     ],
     
     "directories": {
       "output": "dist",
-      "buildResources": "build"
+      "buildResources": "public"
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "./public/altenia-logo.png"
     },
     "mac": {
       "target": "dmg"

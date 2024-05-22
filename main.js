@@ -34,7 +34,7 @@ function createWindow () {
 
   
   //production
-  mainWindow.loadURL(`file://${path.join(__dirname, './index.html')}`)
+  mainWindow.loadURL(`file://${path.join(__dirname, 'index.html')}`)
   //dev
   // mainWindow.loadURL("http://localhost:3000")
 
