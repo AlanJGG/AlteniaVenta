@@ -14,6 +14,7 @@ function createWindow () {
     maximizable: false,
     fullscreenable: false,
     webPreferences: {
+      nodeIntegration: true,
       preload: path.join(__dirname, 'preload.js')
     }
   })
@@ -34,7 +35,7 @@ function createWindow () {
 
   
   //production
-  mainWindow.loadURL(`file://${path.join(__dirname, 'index.html')}`)
+  mainWindow.loadURL(`file://${path.join(__dirname, './build/index.html')}`)
   //dev
   // mainWindow.loadURL("http://localhost:3000")
 
