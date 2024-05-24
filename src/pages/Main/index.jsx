@@ -13,13 +13,20 @@ export const Main = () => {
   }, []);
 
   return (
-    <div className="d-flex justify-content-center">
-      <div className="btn-container">
-        <button className="btn-accion" onClick={() => navigate("/.")}>
-          Venta
-        </button>
-        <button className="btn-accion">Gastos</button>
-        <button className="btn-accion">Corte</button>
+    <div>
+      <div className="subtitle p-3">Bienvenido: [User]</div>
+      <div className="d-flex justify-content-center">
+        <div className="btn-container">
+          <button className="btn-accion" onClick={() => navigate("/venta")}>
+            Venta
+          </button>
+          <button className="btn-accion" onClick={() => navigate("/gastos")}>
+            Gastos
+          </button>
+          <button className="btn-accion" onClick={() => navigate("/corte")}>
+            Corte
+          </button>
+        </div>
       </div>
     </div>
   );
