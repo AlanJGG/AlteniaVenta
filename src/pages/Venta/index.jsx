@@ -1,23 +1,32 @@
-import { useState, useEffect } from "react";
+import IconButton from "@mui/material/IconButton";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
+// import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-// import { myConsole } from "@/utils/objects";
 
 export const Venta = () => {
   const navigate = useNavigate();
-  const handleSubmit = () => {
-    // myConsole.log("Hola");
-  };
-
-  useEffect(() => {
-    // myConsole.log("Hola")
-  }, []);
 
   return (
-    <div>
-      <div>Venta</div>
-      <button className="btn-accion" onClick={() => navigate("/main-page")}>
-        Atrás
-      </button>
+    <div className="w-100 p-0 m-0">
+      {/* Fecha y hora */}
+      <div className="d-flex p-2 justify-content-between">
+        <IconButton
+          className="text-start"
+          children={<ArrowBackIcon />}
+          onClick={() => navigate("/main-page")}
+        />
+        <div className="d-flex gap-5 mx-5 mt-2">
+          <div>Hora</div>
+          <div>Fecha</div>
+        </div>
+      </div>
+      {/* Venta de mostrador */}
+      <div className="container"><div>HOLA</div></div>
+      {/* Pedidos */}
+      <div className="container"></div>
+      {/* Acciones */}
+      <div className="container"></div>
     </div>
   );
 };
