@@ -1,7 +1,10 @@
-import Button from '@mui/material/Button';
+import { useNavigate } from "react-router-dom";
 
-export const Btn1 = ({ title, onClick, variant }) => {
+export const Btn1 = ({title, route}) => {
+    const navigate = useNavigate();
     return (
-        <Button variant={variant} onClick={onClick}>{title}</Button>
+        <button className="btn1" onClick={() => navigate(route)}>
+            {title}
+        </button>
     )
 }

@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Btn1 } from "components";
 // import { myConsole } from "@/utils/objects";
 
 export const Main = () => {
-  const navigate = useNavigate();
   const handleSubmit = () => {
     // myConsole.log("Hola");
   };
@@ -17,15 +16,9 @@ export const Main = () => {
       <div className="subtitle p-3">Bienvenido: [User]</div>
       <div className="d-flex justify-content-center">
         <div className="btn-container">
-          <button className="btn-accion" onClick={() => navigate("/venta")}>
-            Venta
-          </button>
-          <button className="btn-accion" onClick={() => navigate("/gastos")}>
-            Gastos
-          </button>
-          <button className="btn-accion" onClick={() => navigate("/corte")}>
-            Corte
-          </button>
+          <Btn1 title="Venta" route="/venta"/>
+          <Btn1 title="Gastos" route="/gastos"/>
+          <Btn1 title="Corte" route="/corte"/>
         </div>
       </div>
     </div>
