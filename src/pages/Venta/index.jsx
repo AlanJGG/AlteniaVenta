@@ -98,7 +98,6 @@ export const Venta = () => {
                     Índice
                   </th>
                   <th className="table_header_fixed p-1 px-3">Cliente</th>
-                  <th className="table_header_fixed  p-1 px-3">Dirección</th>
                   <th className="table_header_fixed  p-1 px-3">Pedido</th>
                   <th className="table_header_fixed  p-1 px-3">
                     Hora recepción
@@ -119,114 +118,17 @@ export const Venta = () => {
                   <td className="pedidos-cell">Juan</td>
                   <td className="pedidos-cell">Juan</td>
                   <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
                 </tr>
-                <tr>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                </tr>
-                <tr>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                </tr>
-                <tr>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                </tr>
-                <tr>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                </tr>
-                <tr>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                </tr>
-                <tr>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                </tr>
-                <tr>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                </tr>
-                <tr>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                </tr>
-                <tr>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                </tr>
+                
               </tbody>
             </table>
           </div>
         </div>
       </div>
       {/* Acciones */}
-      <div className="container"></div>
+      <div className="container">
+        <div className="actions"></div>
+      </div>
     </div>
   );
 };
