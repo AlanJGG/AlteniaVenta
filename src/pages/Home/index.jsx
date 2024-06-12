@@ -6,6 +6,7 @@ import KeyIcon from "@mui/icons-material/Key";
 import { Btn1 } from "components";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Btn0 } from "components";
 
 // import { myConsole } from "@/utils/objects";
 
@@ -13,6 +14,7 @@ export const Home = () => {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
+    console.log("Hey");
     navigate("/main-page");
   };
 
@@ -29,8 +31,9 @@ export const Home = () => {
         <div className="d-block justify-content-center mt-5">
           <h2 className="subtitle">Ingresa con tu usuario y contraseña</h2>
 
-        <div className="d-flex justify-content-center mt-3">
+          <div className="d-flex justify-content-center mt-3">
             <TextField
+              sx={}
               label="Usuario"
               variant="filled"
               InputProps={{
@@ -56,7 +59,7 @@ export const Home = () => {
             />
           </div>
           <div className="d-flex justify-content-center mt-3">
-            <Btn1 title="Ingresar" variant="outlined" onClick={handleSubmit} />
+            <Btn0 title="Ingresar" onClick={handleSubmit} />
           </div>
         </div>
       </div>
