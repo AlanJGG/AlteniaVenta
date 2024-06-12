@@ -33,7 +33,6 @@ export const Home = () => {
 
           <div className="d-flex justify-content-center mt-3">
             <TextField
-              sx={}
               label="Usuario"
               variant="filled"
               InputProps={{

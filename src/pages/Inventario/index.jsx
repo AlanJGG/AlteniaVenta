@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // import { myConsole } from "@/utils/objects";
 
-export const Gastos = () => {
+export const Inventario = () => {
   const navigate = useNavigate();
   const handleSubmit = () => {
     // myConsole.log("Hola");
@@ -14,7 +14,7 @@ export const Gastos = () => {
 
   return (
     <div>
-      <div>Gastos</div>
+      <div>Inventario</div>
       <button className="btn-accion" onClick={() => navigate("/main-page")}>
         Atrás
       </button>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import { Home, Main, Venta, Gastos, Corte } from "pages";
+import { Home, Main, Venta, Inventario, Corte } from "pages";
 
 export const ROUTES = () => {
   return (
@@ -9,7 +9,7 @@ export const ROUTES = () => {
       <Route path="/:code/:code2" element={<Home />} />
       <Route path="/main-page" element={<Main />} />
       <Route path="/venta" element={<Venta />} />
-      <Route path="/gastos" element={<Gastos />} />
+      <Route path="/inventario" element={<Inventario />} />
       <Route path="/corte" element={<Corte />} />
 
       <Route path="/*" element={<Navigate to="/" />} />

@@ -48,7 +48,7 @@ export const Venta = () => {
                   <Btn2 title="Totopo" />
                 </td>
               </tr>
-              
+
               <tr>
                 <td className="p-1">
                   <Btn2 title="Salsa" />
@@ -87,7 +87,144 @@ export const Venta = () => {
         </div>
       </div>
       {/* Pedidos */}
-      <div className="container"></div>
+      <div className="container">
+        <div className="subtitle d-flex justify-content-center">Pedidos</div>
+        <div className="d-flex justify-content-lg-start">
+          <div className="table-container">
+            <table className="pedidos-table">
+              <thead className="table_header_fixed">
+                <tr>
+                  <th className="table_header_fixed pedidos-cel p-1 px-3">
+                    Índice
+                  </th>
+                  <th className="table_header_fixed p-1 px-3">Cliente</th>
+                  <th className="table_header_fixed  p-1 px-3">Dirección</th>
+                  <th className="table_header_fixed  p-1 px-3">Pedido</th>
+                  <th className="table_header_fixed  p-1 px-3">
+                    Hora recepción
+                  </th>
+                  <th className="table_header_fixed  p-1 px-3">Hora entrega</th>
+                  <th className="table_header_fixed  p-1 px-3">Estado</th>
+                  <th className="table_header_fixed  p-1 px-3">Pago</th>
+                  <th className="table_header_fixed  p-1 px-3">Repartidor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                </tr>
+                <tr>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                </tr>
+                <tr>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                </tr>
+                <tr>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                </tr>
+                <tr>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                </tr>
+                <tr>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                </tr>
+                <tr>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                </tr>
+                <tr>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                </tr>
+                <tr>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                </tr>
+                <tr>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                  <td className="pedidos-cell">Juan</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
       {/* Acciones */}
       <div className="container"></div>
     </div>

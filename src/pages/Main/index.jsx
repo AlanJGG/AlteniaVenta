@@ -17,7 +17,7 @@ export const Main = () => {
       <div className="d-flex justify-content-center">
         <div className="btn-container">
           <Btn1 title="Venta" route="/venta"/>
-          <Btn1 title="Gastos" route="/gastos"/>
+          <Btn1 title="Inventario" route="/inventario"/>
           <Btn1 title="Corte" route="/corte"/>
         </div>
       </div>
