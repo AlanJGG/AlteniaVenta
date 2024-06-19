@@ -15,8 +15,8 @@
   }
 
   .table-container {
-    height: 250px;
-    max-height: 250px;
+    height: 200px;
+    max-height: 200px;
     overflow-y: auto;
     width: 100%;
     .pedidos-table {
@@ -40,5 +40,6 @@
     width: 100%;
     height: 100%;
     border-top: 1px solid $color_4;
+    padding-top: 10px;
   }
 }

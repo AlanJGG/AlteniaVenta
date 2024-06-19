@@ -119,7 +119,6 @@ export const Venta = () => {
                   <td className="pedidos-cell">Juan</td>
                   <td className="pedidos-cell">Juan</td>
                 </tr>
-                
               </tbody>
             </table>
           </div>
@@ -127,7 +126,10 @@ export const Venta = () => {
       </div>
       {/* Acciones */}
       <div className="container">
-        <div className="actions"></div>
+        <div className="actions d-flex gap-3 justify-content-lg-start">
+          <Btn2 title="Registrar gasto" />
+          <Btn2 title="Actualizar clientes" />
+        </div>
       </div>
     </div>
   );
