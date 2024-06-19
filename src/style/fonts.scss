@@ -1,5 +1,4 @@
-
-$font_1: 'Arial';
+$font_1: "Arial";
 
 .title {
   font-family: $font_1;
@@ -8,12 +7,12 @@ $font_1: 'Arial';
 }
 
 .subtitle {
-    font-family: $font_1;
-    font-size: 16px;
-    font-weight: bold;
+  font-family: $font_1;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .text {
-    font-family: $font_1;
-    font-size: 12px;
+  font-family: $font_1;
+  font-size: 12px;
 }

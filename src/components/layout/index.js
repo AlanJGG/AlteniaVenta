@@ -1,3 +1,3 @@
 // start:ng42.barrel
-export * from "./buttons";
+export { Header1 } from "./Header1";
 // end:ng42.barrel

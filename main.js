@@ -16,7 +16,7 @@ function createWindow() {
     minimizable: false,
     maximizable: false,
     fullscreenable: false,
-    icon: './public/altenia-logo.png',
+    icon: "./public/altenia-logo.png",
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(__dirname, "preload.js"),
@@ -29,7 +29,7 @@ function createWindow() {
   mainWindow.loadURL(
     isDev
       ? "http://localhost:3000"
-      : `file://${path.join(__dirname, "./build/index.html")}`
+      : `file://${path.join(__dirname, "./build/index.html")}`,
   );
 
   const template = [
@@ -52,11 +52,12 @@ function createWindow() {
   // Set as main application menu
   Menu.setApplicationMenu(menu);
   // Open the DevTools.
-  if (isDev) mainWindow.webContents.on('before-input-event', (_, input) => {
-    if (input.type === 'keyDown' && input.key === 'F12') {
-      mainWindow.webContents.toggleDevTools();
-    }
-});
+  if (isDev)
+    mainWindow.webContents.on("before-input-event", (_, input) => {
+      if (input.type === "keyDown" && input.key === "F12") {
+        mainWindow.webContents.toggleDevTools();
+      }
+    });
 }
 
 // This method will be called when Electron has finished

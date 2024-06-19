@@ -1,6 +1,4 @@
-import IconButton from "@mui/material/IconButton";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { Btn2 } from "components";
+import { Header1, Btn2 } from "components";
 
 // import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +9,7 @@ export const Venta = () => {
   return (
     <div className="w-100 p-0 m-0">
       {/* Fecha y hora */}
-      <div className="d-flex p-2 justify-content-between">
+      {/* <div className="d-flex p-2 justify-content-between">
         <IconButton
           className="text-start"
           children={<ArrowBackIcon />}
@@ -21,7 +19,8 @@ export const Venta = () => {
           <div>Hora</div>
           <div>Fecha</div>
         </div>
-      </div>
+      </div> */}
+      <Header1 />
       {/* Venta de mostrador */}
       <div className="container d-flex gap-3">
         <div className="ticket-container">

@@ -16,9 +16,9 @@ export const Main = () => {
       <div className="subtitle p-3">Bienvenido: [User]</div>
       <div className="d-flex justify-content-center">
         <div className="btn-container">
-          <Btn1 title="Venta" route="/venta"/>
-          <Btn1 title="Inventario" route="/inventario"/>
-          <Btn1 title="Corte" route="/corte"/>
+          <Btn1 title="Venta" route="/venta" />
+          <Btn1 title="Inventario" route="/inventario" />
+          <Btn1 title="Corte" route="/corte" />
         </div>
       </div>
     </div>
