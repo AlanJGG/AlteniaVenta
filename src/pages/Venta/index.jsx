@@ -9,18 +9,7 @@ export const Venta = () => {
   return (
     <div className="w-100 p-0 m-0">
       {/* Fecha y hora */}
-      {/* <div className="d-flex p-2 justify-content-between">
-        <IconButton
-          className="text-start"
-          children={<ArrowBackIcon />}
-          onClick={() => navigate("/main-page")}
-        />
-        <div className="d-flex gap-5 mx-5 mt-2">
-          <div>Hora</div>
-          <div>Fecha</div>
-        </div>
-      </div> */}
-      <Header1 />
+      <Header1 goBack={'/main-page'}/>
       {/* Venta de mostrador */}
       <div className="container d-flex gap-3">
         <div className="ticket-container">
