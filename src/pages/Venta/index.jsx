@@ -1,15 +1,17 @@
-import { Header1, Btn2 } from "components";
+import { Header1, ModalClientes, Btn2 } from "components";
+import { useState } from "react";
 
 // import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const Venta = () => {
+  const [showModalClientes, setShowModalClientes] = useState(false);
   const navigate = useNavigate();
 
   return (
     <div className="w-100 p-0 m-0">
       {/* Fecha y hora */}
-      <Header1 goBack={'/main-page'}/>
+      <Header1 goBack={"/main-page"} />
       {/* Venta de mostrador */}
       <div className="container d-flex gap-3">
         <div className="ticket-container">
@@ -116,9 +118,16 @@ export const Venta = () => {
       <div className="container">
         <div className="actions d-flex gap-3 justify-content-lg-start">
           <Btn2 title="Registrar gasto" />
-          <Btn2 title="Actualizar clientes" />
+          <Btn2
+            title="Actualizar clientes"
+            onClick={() => setShowModalClientes(true)}
+          />
         </div>
       </div>
+      <ModalClientes
+        show={showModalClientes}
+        onHide={() => setShowModalClientes(false)}
+      />
     </div>
   );
 };

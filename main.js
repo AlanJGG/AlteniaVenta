@@ -29,28 +29,31 @@ function createWindow() {
   mainWindow.loadURL(
     isDev
       ? "http://localhost:3000"
-      : `file://${path.join(__dirname, "./build/index.html")}`,
+      : `file://${path.join(__dirname, "./build/index.html")}`
   );
 
-  const template = [
-    {
-      label: "Archivo",
-      submenu: [
-        {
-          label: "Salir",
-          click() {
-            app.quit();
-          },
-        },
-      ],
-    },
-  ];
+  // const template = [
+  //   {
+  //     label: "Archivo",
+  //     submenu: [
+  //       {
+  //         label: "Salir",
+  //         click() {
+  //           app.quit();
+  //         },
+  //       },
+  //     ],
+  //   },
+  // ];
 
-  // Build menu from template
-  const menu = Menu.buildFromTemplate(template);
+  // // Build menu from template
+  // const menu = Menu.buildFromTemplate(template);
 
-  // Set as main application menu
-  Menu.setApplicationMenu(menu);
+  // // Set as main application menu
+  // Menu.setApplicationMenu(menu);
+
+  //Remove menu
+  mainWindow.removeMenu();
   // Open the DevTools.
   if (isDev)
     mainWindow.webContents.on("before-input-event", (_, input) => {

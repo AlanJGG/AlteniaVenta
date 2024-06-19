@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Btn1 } from "components";
+import { Header2 } from "components";
 // import { myConsole } from "@/utils/objects";
 
 export const Main = () => {
@@ -13,7 +14,7 @@ export const Main = () => {
 
   return (
     <div>
-      <div className="subtitle p-3">Bienvenido: [User]</div>
+      <Header2 />
       <div className="d-flex justify-content-center">
         <div className="btn-container">
           <Btn1 title="Venta" route="/venta" />
