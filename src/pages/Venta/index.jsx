@@ -1,12 +1,10 @@
-import { Header1, ModalClientes, Btn2 } from "components";
-import { useState } from "react";
+import { Header1, ModalClientes, ModalGastos, Btn2 } from "components";
 
-// import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export const Venta = () => {
   const [showModalClientes, setShowModalClientes] = useState(false);
-  const navigate = useNavigate();
+  const [showModalGastos, setShowModalGastos] = useState(false);
 
   return (
     <div className="w-100 p-0 m-0">
@@ -117,7 +115,10 @@ export const Venta = () => {
       {/* Acciones */}
       <div className="container">
         <div className="actions d-flex gap-3 justify-content-lg-start">
-          <Btn2 title="Registrar gasto" />
+          <Btn2
+            title="Registrar gasto"
+            onClick={() => setShowModalGastos(true)}
+          />
           <Btn2
             title="Actualizar clientes"
             onClick={() => setShowModalClientes(true)}
@@ -127,6 +128,10 @@ export const Venta = () => {
       <ModalClientes
         show={showModalClientes}
         onHide={() => setShowModalClientes(false)}
+      />
+      <ModalGastos
+        show={showModalGastos}
+        onHide={() => setShowModalGastos(false)}
       />
     </div>
   );

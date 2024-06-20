@@ -1,3 +1,5 @@
+import IconButton from "@mui/material/IconButton";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useNavigate } from "react-router-dom";
 
 export const Header2 = () => {
@@ -5,6 +7,11 @@ export const Header2 = () => {
   return (
     <div className="d-flex p-2 justify-content-between header1 pb-3">
       <div className="d-flex mx-5">
+      <IconButton
+          className="text-start"
+          children={<ArrowBackIcon />}
+          onClick={() => navigate(".")}
+        />
         <div className="subtitle mt-2">Atiende:</div>
       </div>
 

@@ -51,3 +51,23 @@
   // transform: translateY(-2px);
   background-color: $color_4;
 }
+
+.btn2 {
+  width: 140px;
+  height: 60px;
+  font-family: $font_1;
+  font-weight: bold;
+  padding-block: 10px;
+  padding-inline: 20px;
+  border: 2px;
+  border-radius: 5px;
+  border: solid 1px $color_4;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.btn2:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 3px;
+  color: $color_1;
+  // transform: translateY(-2px);
+  background-color: $color_4;
+}

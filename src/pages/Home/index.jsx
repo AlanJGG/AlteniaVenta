@@ -33,7 +33,9 @@ export const Home = () => {
 
           <div className="d-flex justify-content-center mt-3">
             <TextField
+              color="secondary"
               label="Usuario"
+              // error
               variant="filled"
               InputProps={{
                 startAdornment: (
@@ -46,7 +48,9 @@ export const Home = () => {
           </div>
           <div className="d-flex justify-content-center mt-3">
             <TextField
+              color="secondary"
               label="Contraseña"
+              // error
               variant="filled"
               InputProps={{
                 startAdornment: (
