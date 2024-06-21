@@ -7,7 +7,7 @@ export const Header2 = () => {
   return (
     <div className="d-flex p-2 justify-content-between header1 pb-3">
       <div className="d-flex mx-5">
-      <IconButton
+        <IconButton
           className="text-start"
           children={<ArrowBackIcon />}
           onClick={() => navigate(".")}

@@ -64,7 +64,6 @@ export const Corte = () => {
                   <td>$8.00</td>
                   <td>$24.00</td>
                 </tr>
-
               </tbody>
             </table>
           </div>

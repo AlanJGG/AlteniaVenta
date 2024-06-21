@@ -76,7 +76,9 @@ export const Inventario = () => {
       <div className="p-3">
         <h1 className="d-flex justify-content-center">Control de Inventario</h1>
         <div className="">
-          <h2 className="d-flex justify-content-center">Filtrar por categoría</h2>
+          <h2 className="d-flex justify-content-center">
+            Filtrar por categoría
+          </h2>
           <div className="mb-1">
             <Btn3
               title="Todos"
@@ -143,7 +145,7 @@ export const Inventario = () => {
           </table>
         </div>
         <div className="">
-          <Btn3 title="Generar Reporte" onClick={generateReport}/>
+          <Btn3 title="Generar Reporte" onClick={generateReport} />
         </div>
       </div>
     </div>
