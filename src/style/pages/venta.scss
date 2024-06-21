@@ -34,8 +34,12 @@
           1px 1px #000;
         background-color: $color_2;
       }
-      .pedidos-cell {
-        border: 1px solid $color_4;
+      .pedidos-row {
+        height: 20px !important;
+        .pedidos-cell {
+          border: 1px solid $color_4;
+          max-height: 20px !important;
+        }
       }
     }
   }

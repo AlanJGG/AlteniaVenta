@@ -1,0 +1,14 @@
+.corte-table-container {
+  height: 200px;
+  overflow-y: auto;
+  .corte-table {
+    .corte-header {
+      position: sticky;
+      top: 0;
+      box-shadow:
+        inset .5px .5px #000,
+        .5px .5px rgba($color: #000000ad, $alpha: .5);
+      background-color: rgba($color: #000000ad, $alpha: 1);
+    }
+  }
+}

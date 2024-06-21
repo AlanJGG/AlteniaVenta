@@ -79,7 +79,7 @@ export const Venta = () => {
         <div className="subtitle d-flex justify-content-center">Pedidos</div>
         <div className="d-flex justify-content-lg-start">
           <div className="table-container">
-            <table className="pedidos-table">
+            <table className="table-striped table table-hover pedidos-table">
               <thead className="table_header_fixed">
                 <tr>
                   <th className="table_header_fixed pedidos-cel p-1 px-3">
@@ -97,15 +97,15 @@ export const Venta = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
-                  <td className="pedidos-cell">Juan</td>
+                <tr className="pedidos-row">
+                  <td className="pedidos-cell text">1</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
                 </tr>
               </tbody>
             </table>

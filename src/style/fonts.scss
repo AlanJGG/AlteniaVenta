@@ -1,4 +1,4 @@
-$font_1: "Arial";
+$font_1: var(--font-inter), sans-serif;
 
 .title {
   font-family: $font_1;
@@ -14,5 +14,5 @@ $font_1: "Arial";
 
 .text {
   font-family: $font_1;
-  font-size: 12px;
+  font-size: 14px;
 }
