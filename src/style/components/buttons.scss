@@ -1,4 +1,5 @@
 .btn0 {
+  cursor: pointer;
   font-family: $font_1;
   padding-block: 10px;
   padding-inline: 40px;
@@ -16,6 +17,7 @@
   background-color: $color_4;
 }
 .btn1 {
+  cursor: pointer;
   font-family: $font_1;
   padding: 25px;
   padding-inline: 40px;
@@ -33,6 +35,7 @@
   background-color: $color_4;
 }
 .btn2 {
+  cursor: pointer;
   width: 140px;
   height: 60px;
   font-family: $font_1;
@@ -53,6 +56,7 @@
 }
 
 .btn3 {
+  cursor: pointer;
   font-size: 12px;
   font-family: $font_1;
   font-weight: bold;

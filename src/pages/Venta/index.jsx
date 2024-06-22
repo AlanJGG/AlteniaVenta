@@ -107,6 +107,46 @@ export const Venta = () => {
                   <td className="pedidos-cell text">Juan</td>
                   <td className="pedidos-cell text">Juan</td>
                 </tr>
+                <tr className="pedidos-row">
+                  <td className="pedidos-cell text">1</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                </tr>
+                <tr className="pedidos-row">
+                  <td className="pedidos-cell text">1</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                </tr>
+                <tr className="pedidos-row">
+                  <td className="pedidos-cell text">1</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                </tr>
+                <tr className="pedidos-row">
+                  <td className="pedidos-cell text">1</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                  <td className="pedidos-cell text">Juan</td>
+                </tr>
               </tbody>
             </table>
           </div>

@@ -7,15 +7,15 @@ function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 1000,
-    height: 800,
-    resizable: false,
+    height: 750,
+    resizable: true,
     minWidth: 1000,
-    maxWidth: 1200,
-    minHeight: 800,
-    maxHeight: 1000,
+    // maxWidth: 1000,
+    minHeight: 750,
+    // maxHeight: 750,
     minimizable: false,
-    maximizable: false,
-    fullscreenable: false,
+    maximizable: true,
+    fullscreenable: true,
     icon: "./public/altenia-logo.png",
     webPreferences: {
       nodeIntegration: true,
