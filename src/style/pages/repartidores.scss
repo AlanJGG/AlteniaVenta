@@ -1,0 +1,14 @@
+.repartidores-table-container {
+    height: 200px;
+    overflow-y: auto;
+    .repartidores-table {
+      .repartidores-header {
+        position: sticky;
+        top: 0;
+        box-shadow:
+          inset 0.5px 0.5px #000,
+          0.5px 0.5px rgba($color: #000000ad, $alpha: 0.5);
+        background-color: rgba($color: #000000ad, $alpha: 1);
+      }
+    }
+  }

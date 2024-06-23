@@ -1,6 +1,14 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import { Home, Main, Venta, Inventario, Corte } from "pages";
+import {
+  Home,
+  Main,
+  Venta,
+  Inventario,
+  Corte,
+  Repartidores,
+  Pedidos,
+} from "pages";
 
 export const ROUTES = () => {
   return (
@@ -11,6 +19,8 @@ export const ROUTES = () => {
       <Route path="/venta" element={<Venta />} />
       <Route path="/inventario" element={<Inventario />} />
       <Route path="/corte" element={<Corte />} />
+      <Route path="/repartidores" element={<Repartidores />} />
+      <Route path="/pedidos" element={<Pedidos />} />
 
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
