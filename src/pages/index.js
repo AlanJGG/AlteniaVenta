@@ -5,5 +5,5 @@ export * from "./Venta";
 export * from "./Inventario";
 export * from "./Corte";
 export * from "./Repartidores";
-export * from "./Pedidos";
+export * from "./Clientes";
 // end:ng42.barrel

@@ -13,7 +13,7 @@ export const Main = () => {
         </div>
         <div className="w-100 d-flex justify-content-center btn-container mt-5">
           <Btn1 title="Repartidores" route="/repartidores"/>
-          <Btn1 title="Pedidos" route="/pedidos"/>
+          <Btn1 title="Clientes" route="/clientes"/>
         </div>
       </div>
     </div>

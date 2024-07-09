@@ -1,4 +1,4 @@
-const { Header1, Btn3 } = require("components");
+import { Header1, Btn3 } from "components";
 
 export const Repartidores = () => {
   return (
@@ -12,7 +12,7 @@ export const Repartidores = () => {
               <tr>
                 <th>Repartidor</th>
                 <th>Total</th>
-                <th>Acciones</th>
+                <th className="d-flex justify-content-center">Acciones</th>
               </tr>
             </thead>
             <tbody>

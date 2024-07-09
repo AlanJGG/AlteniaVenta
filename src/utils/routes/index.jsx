@@ -7,7 +7,7 @@ import {
   Inventario,
   Corte,
   Repartidores,
-  Pedidos,
+  Clientes,
 } from "pages";
 
 export const ROUTES = () => {
@@ -20,7 +20,7 @@ export const ROUTES = () => {
       <Route path="/inventario" element={<Inventario />} />
       <Route path="/corte" element={<Corte />} />
       <Route path="/repartidores" element={<Repartidores />} />
-      <Route path="/pedidos" element={<Pedidos />} />
+      <Route path="/clientes" element={<Clientes />} />
 
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
