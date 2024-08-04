@@ -59,7 +59,7 @@ const updateClienteEstado = (id, estado_cli, callback) => {
 };
 
 const deleteCliente = (id, callback) => {
-  db.run("DELETE FROM CCliente WHERE id_pro = ?", [id], function (err) {
+  db.run("DELETE FROM CCliente WHERE id_cli = ?", [id], function (err) {
     if (err) {
       return callback(err);
     }
