@@ -21,7 +21,7 @@ const getClienteById = (id, callback) => {
 const createCliente = (cliente, callback) => {
   const { nombre_cli, tel_cli, ubi_cli, precios_cli } = cliente;
   db.run(
-    "INSERT INTO CCliente (nombre_cli, tel_cli, ubi_cli, precios_cli) VALUES (?)",
+    "INSERT INTO CCliente (nombre_cli, tel_cli, ubi_cli, precios_cli) VALUES (?, ?, ?, ?)",
     [nombre_cli, tel_cli, ubi_cli, JSON.stringify(precios_cli)],
     function (err) {
       if (err) {
@@ -34,7 +34,7 @@ const createCliente = (cliente, callback) => {
 
 const updateClienteDeuda = (id, deuda, callback) => {
   db.run(
-    "UPDATE CCliente SET deuda_cli WHERE id_cli = ?",
+    "UPDATE CCliente SET deuda_cli = ? WHERE id_cli = ?",
     [deuda, id],
     function (err) {
       if (err) {
