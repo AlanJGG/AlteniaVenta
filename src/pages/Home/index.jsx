@@ -27,7 +27,7 @@ export const Home = () => {
   }, []);
 
   const handleSubmit = async () => {
-    const createdProduct = await createProduct({ nombre_pro: "pENDEJA" });
+    const createdProduct = await createProduct({ nombre_pro: "Tortillas" });
     console.log("Producto creado: ", createdProduct);
     fetchProducts();
     console.log(products);

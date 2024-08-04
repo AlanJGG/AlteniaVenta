@@ -59,6 +59,6 @@ module.exports = {
   getAllClientes,
   getClienteById,
   createCliente,
-  updateCliente,
+  updateClienteDeuda,
   deleteCliente,
 };
