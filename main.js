@@ -5,7 +5,6 @@ const isDev = require("electron-is-dev");
 require('./server');
 
 function createWindow() {
-  // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 1000,
     height: 750,
@@ -24,9 +23,6 @@ function createWindow() {
     },
   });
 
-  //production
-  // mainWindow.loadURL(`file://${path.join(__dirname, './build/index.html')}`)
-  //loadURL
   mainWindow.loadURL(
     isDev
       ? "http://localhost:3000"
@@ -50,6 +46,7 @@ function createWindow() {
 
   //Remove menu
   mainWindow.removeMenu();
+  
   // Open the DevTools.
   if (isDev)
     mainWindow.webContents.on("before-input-event", (_, input) => {

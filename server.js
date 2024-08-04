@@ -1,22 +1,25 @@
-const express = require('express');
+const express = require("express");
 const app = express();
+const cors = require("cors");
 const port = 3001;
 
-const productoRoutes = require('./src/db/CProducto');
-const clienteRoutes = require('./src/db/CCliente');
-const repartidorRoutes = require('./src/db/CRepartidor');
-const rolRoutes = require('./src/db/CRol');
-const corteRoutes = require('./src/db/MCorte');
-const gastoRoutes = require('./src/db/MGasto');
-const pedidoRoutes = require('./src/db/MPedido');
-const userRoutes = require('./src/db/MUser');
-const ventaRoutes = require('./src/db/MVenta');
+app.use(cors());
+
+const productoRoutes = require("./src/db/CProducto");
+const clienteRoutes = require("./src/db/CCliente");
+const repartidorRoutes = require("./src/db/CRepartidor");
+const rolRoutes = require("./src/db/CRol");
+const corteRoutes = require("./src/db/MCorte");
+const gastoRoutes = require("./src/db/MGasto");
+const pedidoRoutes = require("./src/db/MPedido");
+const userRoutes = require("./src/db/MUser");
+const ventaRoutes = require("./src/db/MVenta");
 // Importa las rutas de los demás módulos según sea necesario
 
 app.use(express.json());
 
 // Rutas para CProducto
-app.get('/api/productos', (req, res) => {
+app.get("/api/productos", (req, res) => {
   productoRoutes.getAllProducts((err, rows) => {
     if (err) {
       return res.status(500).send(err.message);
@@ -25,7 +28,7 @@ app.get('/api/productos', (req, res) => {
   });
 });
 
-app.get('/api/productos/:id', (req, res) => {
+app.get("/api/productos/:id", (req, res) => {
   const id = req.params.id;
   productoRoutes.getProductById(id, (err, row) => {
     if (err) {
@@ -35,9 +38,9 @@ app.get('/api/productos/:id', (req, res) => {
   });
 });
 
-app.post('/api/productos', (req, res) => {
-  const product = req.body;
-  productoRoutes.createProduct(product, (err, result) => {
+app.post("/api/productos", (req, res) => {
+  const { nombre_pro } = req.body;
+  productoRoutes.createProduct(nombre_pro, (err, result) => {
     if (err) {
       return res.status(500).send(err.message);
     }
@@ -45,7 +48,7 @@ app.post('/api/productos', (req, res) => {
   });
 });
 
-app.put('/api/productos/:id', (req, res) => {
+app.put("/api/productos/:id", (req, res) => {
   const id = req.params.id;
   const product = req.body;
   productoRoutes.updateProduct(id, product, (err, result) => {
@@ -56,7 +59,7 @@ app.put('/api/productos/:id', (req, res) => {
   });
 });
 
-app.delete('/api/productos/:id', (req, res) => {
+app.delete("/api/productos/:id", (req, res) => {
   const id = req.params.id;
   productoRoutes.deleteProduct(id, (err, result) => {
     if (err) {

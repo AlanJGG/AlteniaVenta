@@ -2,8 +2,12 @@
 const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 const path = require('path');
+const dotenv = require('dotenv');
 
-const dbPath = path.join(__dirname, 'alteniadb.sqlite');
+const env = process.env.NODE_ENV || 'development';
+dotenv.config({ path: `.env.${env}` });
+
+const dbPath = path.join(__dirname, '../../', process.env.DATABASE_PATH);
 
 const initializeDatabase = (db) => {
   db.serialize(() => {

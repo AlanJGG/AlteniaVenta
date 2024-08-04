@@ -19,7 +19,9 @@
     "axios": "^1.7.3",
     "bootstrap": "^5.3.3",
     "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
     "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
     "electron-is-dev": "^2.0.0",
     "express": "^4.19.2",
     "react": "^18.2.0",
@@ -34,13 +36,13 @@
   },
   "main": "main.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "cross-env NODE_ENV=development react-scripts start",
+    "build": "cross-env NODE_ENV=production react-scripts build",
+    "test": "cross-env NODE_ENV=test react-scripts test",
+    "eject": "react-scripts eject",
     "electron:start": "wait-on http://127.0.0.1:3000 && electron .",
-    "dev": "concurrently \"cross-env BROWSER=none npm start\" \"npm run electron:start\"",
-    "dist": "electron-builder",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "concurrently \"cross-env NODE_ENV=development BROWSER=none npm start\" \"npm run electron:start\"",
+    "dist": "electron-builder"
   },
   "eslintConfig": {
     "extends": [

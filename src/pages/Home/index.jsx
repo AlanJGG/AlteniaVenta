@@ -7,15 +7,30 @@ import { Btn1 } from "components";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Btn0 } from "components";
+import { getAllProducts, createProduct } from "services";
 
 // import { myConsole } from "@/utils/objects";
 
 export const Home = () => {
   const navigate = useNavigate();
+  const [products, setProducts] = useState([]); // Estado para almacenar los productos
+  const fetchProducts = async () => {
+    try {
+      const productsData = await getAllProducts(); // Espera la respuesta de la API
+      setProducts(productsData); // Guarda los productos en el estado
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  };
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
-  const handleSubmit = () => {
-    console.log("Hey");
-    navigate("/main-page");
+  const handleSubmit = async () => {
+    const createdProduct = await createProduct({ nombre_pro: "pENDEJA" });
+    console.log("Producto creado: ", createdProduct);
+    fetchProducts();
+    console.log(products);
   };
 
   useEffect(() => {

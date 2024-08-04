@@ -4,7 +4,8 @@
     "paths": {
       "pages": ["./pages/*"],
       "style": ["./style/*"],
-      "components": ["./components/*"]
+      "components": ["./components/*"],
+      "services": ["./services/*"]
     }
   },
   "include": ["src"]
