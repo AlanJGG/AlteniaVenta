@@ -1,6 +1,6 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const clienteController = require('../../../db/CCliente');
+const clienteController = require("../../../db/CCliente");
 
 router.get("/", (req, res) => {
   clienteController.getAllClientes((err, rows) => {
@@ -22,8 +22,8 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  const { nombre_pro } = req.body;
-  clienteController.createCliente(nombre_pro, (err, result) => {
+  const cliente = req.body;
+  clienteController.createCliente(cliente, (err, result) => {
     if (err) {
       return res.status(500).send(err.message);
     }
@@ -33,8 +33,21 @@ router.post("/", (req, res) => {
 
 router.put("/:id/deuda", (req, res) => {
   const id = req.params.id;
-  const cliente = req.body;
-  clienteController.updateClienteDeuda(id, cliente, (err, result) => {
+  const deuda_cli = parseFloat(req.body);
+
+  clienteController.updateClienteDeuda(id, deuda_cli, (err, result) => {
+    if (err) {
+      return res.status(500).send(err.message);
+    }
+    res.send(result);
+  });
+});
+
+router.put("/:id/estado", (req, res) => {
+  const id = req.params.id;
+  const estado_cli = parseInt(req.body);
+
+  clienteController.updateClienteEstado(id, estado_cli, (err, result) => {
     if (err) {
       return res.status(500).send(err.message);
     }
