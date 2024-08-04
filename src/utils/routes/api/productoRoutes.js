@@ -1,6 +1,6 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const productoController = require('../../../db/CProducto');
+const productoController = require("../../../db/CProducto");
 
 router.get("/", (req, res) => {
   productoController.getAllProducts((err, rows) => {
@@ -22,7 +22,8 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  const { nombre_pro } = req.body;
+  const nombre_pro = req.body;
+  console.log("NOMBRE:", nombre_pro);
   productoController.createProduct(nombre_pro, (err, result) => {
     if (err) {
       return res.status(500).send(err.message);
@@ -31,10 +32,21 @@ router.post("/", (req, res) => {
   });
 });
 
-router.put("/:id", (req, res) => {
+router.put("/:id/cantidad", (req, res) => {
   const id = req.params.id;
-  const product = req.body;
-  productoController.updateProduct(id, product, (err, result) => {
+  const cantidad_pro = parseInt(req.body);
+  productoController.updateProductCantidad(id, cantidad_pro, (err, result) => {
+    if (err) {
+      return res.status(500).send(err.message);
+    }
+    res.send(result);
+  });
+});
+
+router.put("/:id/estado", (req, res) => {
+  const id = req.params.id;
+  const estado_pro = parseInt(req.body);
+  productoController.updateProductEstado(id, estado_pro, (err, result) => {
     if (err) {
       return res.status(500).send(err.message);
     }

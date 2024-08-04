@@ -1,4 +1,4 @@
-const db = require('./database');
+const db = require("./database");
 
 const getAllProducts = (callback) => {
   db.all("SELECT * FROM CProducto", [], (err, rows) => {
@@ -31,11 +31,10 @@ const createProduct = (nombre_pro, callback) => {
   );
 };
 
-const updateProduct = (id, product, callback) => {
-  const { nombre_pro, cantidad_pro, estado_pro } = product;
+const updateProductCantidad = (id, cantidad_pro, callback) => {
   db.run(
-    "UPDATE CProducto SET nombre_pro = ?, cantidad_pro = ?, estado_pro = ? WHERE id_pro = ?",
-    [nombre_pro, cantidad_pro, estado_pro, id],
+    "UPDATE CProducto SET cantidad_pro = ? WHERE id_pro = ?",
+    [cantidad_pro, id],
     function (err) {
       if (err) {
         return callback(err);
@@ -43,6 +42,32 @@ const updateProduct = (id, product, callback) => {
       callback(null, { changes: this.changes });
     }
   );
+};
+
+const updateProductEstado = (id, estado_pro, callback) => {
+  if (estado_pro) {
+    db.run(
+      "UPDATE CProducto SET estado_pro = 1 WHERE id_pro = ?",
+      [id],
+      function (err) {
+        if (err) {
+          return callback(err);
+        }
+        callback(null, { changes: this.changes });
+      }
+    );
+  } else {
+    db.run(
+      "UPDATE CProducto SET estado_pro = 0, cantidad_pro = 0 WHERE id_pro = ?",
+      [id],
+      function (err) {
+        if (err) {
+          return callback(err);
+        }
+        callback(null, { changes: this.changes });
+      }
+    );
+  }
 };
 
 const deleteProduct = (id, callback) => {
@@ -58,6 +83,7 @@ module.exports = {
   getAllProducts,
   getProductById,
   createProduct,
-  updateProduct,
+  updateProductCantidad,
+  updateProductEstado,
   deleteProduct,
 };

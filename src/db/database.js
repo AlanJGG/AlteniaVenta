@@ -1,13 +1,13 @@
 // /src/db/database.js
-const sqlite3 = require('sqlite3').verbose();
-const fs = require('fs');
-const path = require('path');
-const dotenv = require('dotenv');
+const sqlite3 = require("sqlite3").verbose();
+const fs = require("fs");
+const path = require("path");
+const dotenv = require("dotenv");
 
-const env = process.env.NODE_ENV || 'development';
+const env = process.env.NODE_ENV || "development";
 dotenv.config({ path: `.env.${env}` });
 
-const dbPath = path.join(__dirname, '../../', process.env.DATABASE_PATH);
+const dbPath = path.join(__dirname, "../../", process.env.DATABASE_PATH);
 
 const initializeDatabase = (db) => {
   db.serialize(() => {
@@ -33,7 +33,6 @@ const initializeDatabase = (db) => {
       );
     `);
 
-    // Agrega aquí las demás tablas de tu esquema
     db.run(`
       CREATE TABLE IF NOT EXISTS CRepartidor (
         id_rep INTEGER PRIMARY KEY,

@@ -1,7 +1,7 @@
-import api from './api';
+import api from "./api";
 
 export const getAllProducts = async () => {
-  const response = await api.get('/productos');
+  const response = await api.get("/productos");
   return response.data;
 };
 
@@ -10,13 +10,39 @@ export const getProductById = async (id) => {
   return response.data;
 };
 
-export const createProduct = async (product) => {
-  const response = await api.post('/productos', product);
+export const createProduct = async (nombre_pro) => {
+  const response = await api.post("/productos", nombre_pro, {
+    headers: {
+      "Content-Type": "text/plain",
+    },
+  });
   return response.data;
 };
 
-export const updateProduct = async (id, product) => {
-  const response = await api.put(`/productos/${id}`, product);
+export const updateProductCantidad = async (id, cantidad_pro) => {
+  const response = await api.put(`/productos/${id}/cantidad`, cantidad_pro, {
+    headers: {
+      "Content-Type": "text/plain",
+    },
+  });
+  return response.data;
+};
+
+export const disableProduct = async (id) => {
+  const response = await api.put(`/productos/${id}/estado`, "0", {
+    headers: {
+      "Content-Type": "text/plain",
+    },
+  });
+  return response.data;
+};
+
+export const enableProduct = async (id) => {
+  const response = await api.put(`/productos/${id}/estado`, "1", {
+    headers: {
+      "Content-Type": "text/plain",
+    },
+  });
   return response.data;
 };
 

@@ -6,6 +6,7 @@ const port = 3001;
 
 app.use(cors());
 app.use(express.json()); // Middleware para analizar JSON
+app.use(express.text()); // Middleware para analizar texto plano
 
 // Ruta base
 const routesBasePath = path.resolve(__dirname, "./src/utils/routes/api");
