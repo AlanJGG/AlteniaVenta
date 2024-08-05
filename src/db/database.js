@@ -178,7 +178,7 @@ const initializeDatabase = (db) => {
       `
       CREATE TABLE IF NOT EXISTS MUser (
         id_user INTEGER PRIMARY KEY AUTOINCREMENT,
-        nombre_user TEXT NOT NULL,
+        nombre_user TEXT NOT NULL UNIQUE,
         tel_user TEXT NOT NULL,
         usuario_user TEXT NOT NULL,
         contrasena_user TEXT NOT NULL,
