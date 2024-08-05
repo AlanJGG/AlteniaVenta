@@ -16,6 +16,7 @@ const initializeDatabase = (db) => {
       CREATE TABLE IF NOT EXISTS CProducto (
         id_pro INTEGER PRIMARY KEY AUTOINCREMENT,
         nombre_pro TEXT NOT NULL,
+        precioM_pro REAL NOT NULL,
         cantidad_pro INTEGER NOT NULL DEFAULT 0,
         estado_pro INTEGER NOT NULL DEFAULT 1
       );
@@ -196,14 +197,35 @@ const initializeDatabase = (db) => {
 
     db.run(
       `
-      INSERT INTO CProducto (nombre_pro, cantidad_pro, estado_pro) VALUES
-      ('Tortilla', -1, 1),
-      ('Masa', -1, 1),
-      ('Papel', -1, 1);
+      INSERT INTO CProducto (id_pro, nombre_pro, cantidad_pro) VALUES
+      (1, 'Tortilla', -1),
+      (2, 'Masa', -1),
+      (3, 'Papel', -1);
     `,
       (err) => {
         if (err) {
           console.error("Error inserting into CProducto table:", err.message);
+        }
+      }
+    );
+
+    const precios = JSON.stringify([
+      { id_pro: 1, nombre_pro: "Tortillas", precio: 20.0 },
+      { id_pro: 2, nombre_pro: "Masa", precio: 17.0 },
+      { id_pro: 3, nombre_pro: "Papel", precio: 1.0 },
+    ]);
+
+    db.run(
+      `
+        INSERT INTO CCliente (nombre_cli, tel_cli, ubi_cli, precios_cli) VALUES
+        ('Mostrador', '5553827968', 'Liberato Lara 85, San Pedro Xalpa', ?)
+      `,
+      [precios],
+      (err) => {
+        if (err) {
+          console.error("Error inserting into CCliente:", err.message);
+        } else {
+          console.log("Default customer 'Mostrador' inserted into CCliente.");
         }
       }
     );
