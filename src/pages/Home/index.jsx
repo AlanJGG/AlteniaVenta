@@ -3,11 +3,12 @@ import InputAdornment from "@mui/material/InputAdornment";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import KeyIcon from "@mui/icons-material/Key";
 
-import { Btn1 } from "components";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Btn0 } from "components";
-import { getAllProducts, createProduct } from "services";
+import {
+  getAllProducts,
+} from "services";
 
 // import { myConsole } from "@/utils/objects";
 
@@ -27,10 +28,7 @@ export const Home = () => {
   }, []);
 
   const handleSubmit = async () => {
-    const createdProduct = await createProduct({ nombre_pro: "Tortillas" });
-    console.log("Producto creado: ", createdProduct);
-    fetchProducts();
-    console.log(products);
+    
   };
 
   useEffect(() => {
