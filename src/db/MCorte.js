@@ -133,7 +133,8 @@ const createCorte = (callback) => {
   );
 };
 
-const finishCorte = ({ recogido_cor, id_user }, callback) => {
+const finishCorte = (body, callback) => {
+  const { recogido_cor, id_user } = body;
   db.serialize(() => {
     db.get("SELECT id_cor FROM MCorte WHERE actual_cor = 1", [], (err, row) => {
       if (err) {

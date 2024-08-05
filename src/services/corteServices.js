@@ -2,17 +2,17 @@ import api from "./api";
 
 export const getAllCortes = async () => {
   try {
-    const response = await api.get("/cortes");
+    const response = await api.get("/corte");
     return response.data;
   } catch (error) {
-    console.error("Error fetching all cortes:", error);
+    console.error("Error fetching all corte:", error);
     throw error;
   }
 };
 
 export const getCorteById = async (id) => {
   try {
-    const response = await api.get(`/cortes/${id}`);
+    const response = await api.get(`/corte/${id}`);
     return response.data;
   } catch (error) {
     console.error(`Error fetching corte with ID ${id}:`, error);
@@ -22,7 +22,7 @@ export const getCorteById = async (id) => {
 
 export const getCorteActual = async () => {
   try {
-    const response = await api.get("/cortes/actual");
+    const response = await api.get("/corte/actual");
     return response.data;
   } catch (error) {
     console.error("Error fetching current corte:", error);
@@ -32,19 +32,19 @@ export const getCorteActual = async () => {
 
 export const getCortesByDateRange = async (startDate, endDate) => {
   try {
-    const response = await api.get("/cortes/range", {
+    const response = await api.get("/corte/range", {
       params: { startDate, endDate },
     });
     return response.data;
   } catch (error) {
-    console.error("Error fetching cortes by date range:", error);
+    console.error("Error fetching corte by date range:", error);
     throw error;
   }
 };
 
 export const createCorte = async () => {
   try {
-    const response = await api.post("/cortes");
+    const response = await api.post("/corte");
     return response.data;
   } catch (error) {
     console.error("Error creating corte:", error);
@@ -54,7 +54,7 @@ export const createCorte = async () => {
 
 export const finishCorte = async (recogido_cor, id_user) => {
   try {
-    const response = await api.put("/cortes/finish", { recogido_cor, id_user });
+    const response = await api.put("/corte/finish", { recogido_cor, id_user });
     return response.data;
   } catch (error) {
     console.error("Error finishing corte:", error);
@@ -64,7 +64,7 @@ export const finishCorte = async (recogido_cor, id_user) => {
 
 export const updateCorte = async (id, updates) => {
   try {
-    const response = await api.put(`/cortes/${id}`, updates);
+    const response = await api.put(`/corte/${id}`, updates);
     return response.data;
   } catch (error) {
     console.error(`Error updating corte with ID ${id}:`, error);
@@ -74,7 +74,7 @@ export const updateCorte = async (id, updates) => {
 
 export const deleteCorte = async (id) => {
   try {
-    const response = await api.delete(`/cortes/${id}`);
+    const response = await api.delete(`/corte/${id}`);
     return response.data;
   } catch (error) {
     console.error(`Error deleting corte with ID ${id}:`, error);

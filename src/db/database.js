@@ -183,7 +183,7 @@ const initializeDatabase = (db) => {
         usuario_user TEXT NOT NULL,
         contrasena_user TEXT NOT NULL,
         id_rol INTEGER NOT NULL,
-        estado_user INTEGER NOT NULL,
+        estado_user INTEGER NOT NULL DEFAULT 1,
         FOREIGN KEY (id_rol) REFERENCES CRol (id_rol)
       );
     `,

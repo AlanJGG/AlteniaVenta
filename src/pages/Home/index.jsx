@@ -6,9 +6,8 @@ import KeyIcon from "@mui/icons-material/Key";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Btn0 } from "components";
-import {
-  getAllProducts,
-} from "services";
+import { getAllProducts, createCorte } from "services";
+import { finishCorte } from "services";
 
 // import { myConsole } from "@/utils/objects";
 
@@ -28,7 +27,9 @@ export const Home = () => {
   }, []);
 
   const handleSubmit = async () => {
-    
+    // const res = await createCorte();
+    const res = await finishCorte(1000.0, 1);
+    console.log(res);
   };
 
   useEffect(() => {
