@@ -9,6 +9,7 @@ import { Btn0 } from "components";
 import { getAllProducts, createCorte } from "services";
 import { finishCorte } from "services";
 import { createProduct } from "services";
+import { getAllGastos } from "services";
 
 // import { myConsole } from "@/utils/objects";
 
@@ -30,7 +31,7 @@ export const Home = () => {
   const handleSubmit = async () => {
     // const res = await createCorte();
     // const res = await finishCorte(1000.0, 1);
-    const res = await createProduct()
+    const res = await getAllGastos
     console.log(res);
   };
 

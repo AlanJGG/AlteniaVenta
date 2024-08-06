@@ -5,7 +5,8 @@
       "pages": ["./pages/*"],
       "style": ["./style/*"],
       "components": ["./components/*"],
-      "services": ["./services/*"]
+      "services": ["./services/*"],
+      "context": ["./context/*"],
     }
   },
   "include": ["src"]

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const gastoController = require("../../../db/CGasto");
+const gastoController = require("../../db/MGasto");
 const { body, param, validationResult } = require("express-validator");
 
 router.get("/", (req, res) => {
