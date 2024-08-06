@@ -75,10 +75,12 @@
     "productName": "AlteniaVenta",
     "files": [
       "build/**/*",
-      "main.js",
+      "public/**/*",
       "preload.js",
-      "package.json",
-      "database.sqlite"
+      "main.js",
+      "server.js",
+      "src/**/*",
+      "package.json"
     ],
     "directories": {
       "output": "dist",

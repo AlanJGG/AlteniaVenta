@@ -16,6 +16,7 @@ import { getAllGastos } from "services";
 export const Home = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]); // Estado para almacenar los productos
+  const [yes, setYes] = useState(false);
   const fetchProducts = async () => {
     try {
       const productsData = await getAllProducts(); // Espera la respuesta de la API
@@ -31,8 +32,8 @@ export const Home = () => {
   const handleSubmit = async () => {
     // const res = await createCorte();
     // const res = await finishCorte(1000.0, 1);
-    const res = await getAllGastos
-    console.log(res);
+    setYes(true);
+    // console.log(res);
   };
 
   useEffect(() => {
@@ -63,6 +64,7 @@ export const Home = () => {
               }}
             />
           </div>
+
           <div className="d-flex justify-content-center mt-3">
             <TextField
               color="secondary"
@@ -79,6 +81,7 @@ export const Home = () => {
             />
           </div>
           <div className="d-flex justify-content-center mt-3">
+            {yes ? products[0].nombre_pro : "NO"}
             <Btn0 title="Ingresar" onClick={handleSubmit} />
           </div>
         </div>

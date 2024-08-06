@@ -10,6 +10,7 @@ app.use(express.text()); // Middleware para analizar texto plano
 
 // Ruta base
 const routesBasePath = path.resolve(__dirname, "./src/api/routes/");
+console.log('routesBasePath:', routesBasePath);
 
 // Importar rutas
 const productoRoutes = require(path.join(routesBasePath, "productoRoutes"));

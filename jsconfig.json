@@ -6,7 +6,7 @@
       "style": ["./style/*"],
       "components": ["./components/*"],
       "services": ["./services/*"],
-      "context": ["./context/*"],
+      "context": ["./context/*"]
     }
   },
   "include": ["src"]
