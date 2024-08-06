@@ -20,9 +20,9 @@ export const getProductById = async (id) => {
   }
 };
 
-export const createProduct = async (nombre_pro) => {
+export const createProduct = async (nombre_pro, precioM_pro) => {
   try {
-    const response = await api.post('/producto', nombre_pro, {
+    const response = await api.post('/producto', {nombre_pro, precioM_pro}, {
       headers: {
         "Content-Type": "text/plain",
       },

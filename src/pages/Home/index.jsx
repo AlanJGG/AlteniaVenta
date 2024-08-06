@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { Btn0 } from "components";
 import { getAllProducts, createCorte } from "services";
 import { finishCorte } from "services";
+import { createProduct } from "services";
 
 // import { myConsole } from "@/utils/objects";
 
@@ -28,7 +29,8 @@ export const Home = () => {
 
   const handleSubmit = async () => {
     // const res = await createCorte();
-    const res = await finishCorte(1000.0, 1);
+    // const res = await finishCorte(1000.0, 1);
+    const res = await createProduct()
     console.log(res);
   };
 

@@ -18,10 +18,10 @@ const getProductById = (id, callback) => {
   });
 };
 
-const createProduct = (nombre_pro, callback) => {
+const createProduct = ({ nombre_pro, precioM_pro }, callback) => {
   db.run(
-    "INSERT INTO CProducto (nombre_pro) VALUES (?)",
-    [nombre_pro],
+    "INSERT INTO CProducto (nombre_pro, precioM_pro) VALUES (?, ?)",
+    [nombre_pro, precioM_pro],
     function (err) {
       if (err) {
         return callback(err);
