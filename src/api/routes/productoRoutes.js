@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const pedidoController = require("../../../db/MPedido");
+const productoController = require("../../db/CProducto");
 const { body, param, validationResult } = require("express-validator");
 
 router.get("/", (req, res) => {
-  pedidoController.getAllPedidos((err, rows) => {
+  productoController.getAllProducts((err, rows) => {
     if (err) {
       return res.status(500).send(err.message);
     }
@@ -21,7 +21,7 @@ router.get(
       return res.status(400).json({ errors: errors.array() });
     }
     const id = req.params.id;
-    pedidoController.getPedidoById(id, (err, row) => {
+    productoController.getProductById(id, (err, row) => {
       if (err) {
         return res.status(500).send(err.message);
       }
@@ -33,35 +33,32 @@ router.get(
 router.post(
   "/",
   [
-    body("nombre_ped").isString().withMessage("nombre_ped must be a string"),
-    body("direccion_ped")
-      .isString()
-      .withMessage("direccion_ped must be a string"),
-    body("telefono_ped")
-      .isString()
-      .withMessage("telefono_ped must be a string"),
-    body("total_ped").isFloat().withMessage("total_ped must be a float"),
+    body("nombre_pro").isString().withMessage("nombre_pro must be a string"),
+    body("precioM_pro").isFloat().withMessage("precioM_pro must be a float"),
   ],
   (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    const pedido = req.body;
-    pedidoController.createPedido(pedido, (err, result) => {
-      if (err) {
-        return res.status(500).send(err.message);
+    const { nombre_pro, precioM_pro } = req.body;
+    productoController.createProduct(
+      { nombre_pro, precioM_pro },
+      (err, result) => {
+        if (err) {
+          return res.status(500).send(err.message);
+        }
+        res.status(201).send(result);
       }
-      res.status(201).send(result);
-    });
+    );
   }
 );
 
 router.put(
-  "/:id/repartidor",
+  "/:id/cantidad",
   [
     param("id").isInt().withMessage("id must be an integer"),
-    body().isInt().withMessage("id_rep must be an integer"),
+    body().isInt().withMessage("cantidad_pro must be an integer"),
   ],
   (req, res) => {
     const errors = validationResult(req);
@@ -69,22 +66,25 @@ router.put(
       return res.status(400).json({ errors: errors.array() });
     }
     const id = req.params.id;
-    const id_rep = parseInt(req.body);
-
-    pedidoController.updatePedidoRepartidor(id, id_rep, (err, result) => {
-      if (err) {
-        return res.status(500).send(err.message);
+    const cantidad_pro = parseInt(req.body);
+    productoController.updateProductCantidad(
+      id,
+      cantidad_pro,
+      (err, result) => {
+        if (err) {
+          return res.status(500).send(err.message);
+        }
+        res.send(result);
       }
-      res.send(result);
-    });
+    );
   }
 );
 
 router.put(
-  "/:id/status",
+  "/:id/estado",
   [
     param("id").isInt().withMessage("id must be an integer"),
-    body().isInt().withMessage("id_sta must be an integer"),
+    body().isInt().withMessage("estado_pro must be an integer"),
   ],
   (req, res) => {
     const errors = validationResult(req);
@@ -92,32 +92,8 @@ router.put(
       return res.status(400).json({ errors: errors.array() });
     }
     const id = req.params.id;
-    const id_sta = parseInt(req.body);
-
-    pedidoController.updatePedidoStatus(id, id_sta, (err, result) => {
-      if (err) {
-        return res.status(500).send(err.message);
-      }
-      res.send(result);
-    });
-  }
-);
-
-router.put(
-  "/:id/pago",
-  [
-    param("id").isInt().withMessage("id must be an integer"),
-    body().isFloat().withMessage("pago_ped must be a float"),
-  ],
-  (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
-    const id = req.params.id;
-    const pago_ped = parseFloat(req.body);
-
-    pedidoController.updatePedidoPago(id, pago_ped, (err, result) => {
+    const estado_pro = parseInt(req.body);
+    productoController.updateProductEstado(id, estado_pro, (err, result) => {
       if (err) {
         return res.status(500).send(err.message);
       }
@@ -135,7 +111,7 @@ router.delete(
       return res.status(400).json({ errors: errors.array() });
     }
     const id = req.params.id;
-    pedidoController.deletepedido(id, (err, result) => {
+    productoController.deleteProduct(id, (err, result) => {
       if (err) {
         return res.status(500).send(err.message);
       }

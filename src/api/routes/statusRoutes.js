@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const rolController = require("../../../db/CRol");
+const statusController = require("../../db/CStatus");
 const { param, validationResult } = require("express-validator");
 
 router.get("/", (req, res) => {
-  rolController.getAllRols((err, rows) => {
+  statusController.getAllStatus((err, rows) => {
     if (err) {
       return res.status(500).send(err.message);
     }
@@ -21,7 +21,7 @@ router.get(
       return res.status(400).json({ errors: errors.array() });
     }
     const id = req.params.id;
-    rolController.getRolById(id, (err, row) => {
+    statusController.getStatusById(id, (err, row) => {
       if (err) {
         return res.status(500).send(err.message);
       }
