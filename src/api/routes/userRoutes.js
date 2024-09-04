@@ -147,9 +147,15 @@ router.post(
           return res.status(500).send(err.message);
         }
         if (!success) {
-          return res.status(401).send("Invalid username or password");
+          return res
+            .status(401)
+            .json({ success: false, message: "Invalid username or password" });
         }
-        res.send(`Welcome, ${user.nombre_user}`);
+        res.json({
+          success: true,
+          message: `Welcome, ${user.nombre_user}`,
+          user,
+        });
       }
     );
   }

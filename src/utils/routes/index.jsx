@@ -2,6 +2,7 @@ import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import {
   Home,
+  Registro,
   Main,
   Venta,
   Inventario,
@@ -15,6 +16,7 @@ export const ROUTES = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/:code/:code2" element={<Home />} />
+      <Route path="/registro" element={<Registro />} />
       <Route path="/main-page" element={<Main />} />
       <Route path="/venta" element={<Venta />} />
       <Route path="/inventario" element={<Inventario />} />

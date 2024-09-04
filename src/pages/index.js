@@ -1,5 +1,6 @@
 // start:ng42.barrel
 export * from "./Home";
+export * from "./Registro";
 export * from "./Main";
 export * from "./Venta";
 export * from "./Inventario";

@@ -100,10 +100,19 @@ const authenticateUser = (username, password, callback) => {
     if (err) return callback(err);
     if (!user) return callback(null, false);
 
+    console.log("Contraseña ingresada:", password);
+    console.log("Hash en la base de datos:", user.contrasena_user);
+
     bcrypt.compare(password, user.contrasena_user, (err, isMatch) => {
       if (err) return callback(err);
       if (isMatch) {
-        callback(null, true, user);
+        callback(null, true, {
+          id_user: user.id_user,
+          nombre_user: user.nombre_user,
+          tel_user: user.tel_user,
+          usuario_user: user.usuario_user,
+          id_rol: user.id_rol,
+        });
       } else {
         callback(null, false);
       }
