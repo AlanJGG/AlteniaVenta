@@ -197,10 +197,10 @@ const initializeDatabase = (db) => {
 
     db.run(
       `
-      INSERT INTO CProducto (id_pro, nombre_pro, cantidad_pro) VALUES
-      (1, 'Tortilla', -1),
-      (2, 'Masa', -1),
-      (3, 'Papel', -1);
+      INSERT INTO CProducto (id_pro, nombre_pro, precioM_pro ,cantidad_pro) VALUES
+      (1, 'Tortilla', 20.0, -1),
+      (2, 'Masa', 17.0 , -1),
+      (3, 'Papel', 1.0, -1);
     `,
       (err) => {
         if (err) {
@@ -209,26 +209,26 @@ const initializeDatabase = (db) => {
       }
     );
 
-    const precios = JSON.stringify([
-      { id_pro: 1, nombre_pro: "Tortillas", precio: 20.0 },
-      { id_pro: 2, nombre_pro: "Masa", precio: 17.0 },
-      { id_pro: 3, nombre_pro: "Papel", precio: 1.0 },
-    ]);
+    // const precios = JSON.stringify([
+    //   { id_pro: 1, nombre_pro: "Tortillas", precio: 20.0 },
+    //   { id_pro: 2, nombre_pro: "Masa", precio: 17.0 },
+    //   { id_pro: 3, nombre_pro: "Papel", precio: 1.0 },
+    // ]);
 
-    db.run(
-      `
-        INSERT INTO CCliente (nombre_cli, tel_cli, ubi_cli, precios_cli) VALUES
-        ('Mostrador', '5553827968', 'Liberato Lara 85, San Pedro Xalpa', ?)
-      `,
-      [precios],
-      (err) => {
-        if (err) {
-          console.error("Error inserting into CCliente:", err.message);
-        } else {
-          console.log("Default customer 'Mostrador' inserted into CCliente.");
-        }
-      }
-    );
+    // db.run(
+    //   `
+    //     INSERT INTO CCliente (nombre_cli, tel_cli, ubi_cli, precios_cli) VALUES
+    //     ('Mostrador', '5553827968', 'Liberato Lara 85, San Pedro Xalpa', ?)
+    //   `,
+    //   [precios],
+    //   (err) => {
+    //     if (err) {
+    //       console.error("Error inserting into CCliente:", err.message);
+    //     } else {
+    //       console.log("Default customer 'Mostrador' inserted into CCliente.");
+    //     }
+    //   }
+    // );
 
     db.run(
       `

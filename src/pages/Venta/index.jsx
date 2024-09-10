@@ -1,10 +1,30 @@
 import { Header1, ModalClientes, ModalGastos, Btn2 } from "components";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getAllProducts } from "services";
 
 export const Venta = () => {
   const [showModalClientes, setShowModalClientes] = useState(false);
   const [showModalGastos, setShowModalGastos] = useState(false);
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    fetchProductos();
+  }, []);
+
+  const fetchProductos = async () => {
+    const response = await getAllProducts();
+    setProductos(response);
+  };
+
+  const renderProductsRows = () => {
+    const rows = [];
+
+    for (let i = 0; i < productos.length; i += 3) {
+      rows.push(productos.slice(i, i + 3));
+    }
+    return rows;
+  };
 
   return (
     <div className="w-100 p-0 m-0">
@@ -25,51 +45,20 @@ export const Venta = () => {
           </div>
           <div className="d-flex justify-content-center">
             <table className="mb-2">
-              <tr>
-                <td className="p-1">
-                  <Btn2 title="Tortilla" />
-                </td>
-                <td className="p-1">
-                  <Btn2 title="Masa" />
-                </td>
-                <td className="p-1">
-                  <Btn2 title="Totopo" />
-                </td>
-              </tr>
-
-              <tr>
-                <td className="p-1">
-                  <Btn2 title="Salsa" />
-                </td>
-                <td className="p-1">
-                  <Btn2 title="Salsa Macha" />
-                </td>
-                <td className="p-1">
-                  <Btn2 title="Comida" />
-                </td>
-              </tr>
-              <tr>
-                <td className="p-1">
-                  <Btn2 title="Tortilla azul" />
-                </td>
-                <td className="p-1">
-                  <Btn2 title="Masa azul" />
-                </td>
-                <td className="p-1">
-                  <Btn2 title="Sopes" />
-                </td>
-              </tr>
-              <tr>
-                <td className="p-1">
-                  <Btn2 title="Papel" />
-                </td>
-                <td className="p-1">
-                  <Btn2 title="Bolsa chica" />
-                </td>
-                <td className="p-1">
-                  <Btn2 title="Bolsa grande" />
-                </td>
-              </tr>
+              <tbody>
+                {renderProductsRows().map((row, index) => (
+                  <tr>
+                    {row.map((product) => (
+                      <td className="p-1">
+                        <Btn2
+                          title={product.nombre_pro}
+                          onClick={() => console.log(product.nombre_pro)}
+                        />
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
             </table>
           </div>
         </div>

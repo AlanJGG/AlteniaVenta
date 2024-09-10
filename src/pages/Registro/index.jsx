@@ -26,10 +26,10 @@ export const Registro = () => {
   };
 
   const handleRegister = async () => {
-    if (permiso !== "9808") {
+    if (permiso !== "9808" && permiso !== "980800") {
       setError("Permiso denegado");
       setTimeout(() => {
-        setError(null); // Navega a la página de inicio después de un registro exitoso
+        setError(null);
       }, 2000);
       return;
     }
@@ -42,7 +42,7 @@ export const Registro = () => {
     ) {
       setError("Todos los campos son obligatorios.");
       setTimeout(() => {
-        setError(null); // Navega a la página de inicio después de un registro exitoso
+        setError(null);
       }, 2000);
       return;
     }
